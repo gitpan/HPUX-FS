@@ -2,7 +2,7 @@ package HPUX::FS;
 
 use 5.006;
 use strict;
-use warnings;
+#use warnings;
 
 require Exporter;
 use AutoLoader qw(AUTOLOAD);
@@ -84,9 +84,9 @@ sub new
     my @first_command;
     my @second_command;
     my @third_command;
-    my $first_command;
-    my $second_command;
-    my $third_command;
+    my $first_command="";
+    my $second_command="";
+    my $third_command="";
     my %filesys_hash;
     my $filesys_hash = \%filesys_hash;
     my $fstab_line;
@@ -157,7 +157,7 @@ sub new
 					directory	=> $split_fstab_line[1],
 					type		=> $split_fstab_line[2],
 					options		=> $split_fstab_line[3],
-					backup_freq	=> $split_fstab_line[4..5],
+					backup_freq	=> $split_fstab_line[4-5],
 					kbytes		=> "NA",
 					kbytes_used	=> "NA",
 					kbytes_avail	=> "NA",
