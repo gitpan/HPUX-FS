@@ -22,7 +22,7 @@ sub new
         target_type     => "local"      ,
         persistance     => "new"        ,
         datafile        => "/tmp/fsinfo.dat",
-        access_prog     => "ssh"        ,
+        access_prog     => "ssh -1"        ,
         access_system   => "localhost"  ,
         access_user     => "root"       ,
         remote_command1 => 'cat /etc/fstab',
@@ -282,7 +282,7 @@ HPUX::FS - Perl module to handle HPUX ioscan command
                                 target_type     =>"local",
                                 persistance     =>"new",
                                 datafile        =>"/tmp/fsdata.dat",
-                                access_prog     =>"ssh",
+                                access_prog     =>"ssh -1",
                                 access_system   =>"localhost",
                                 access_user     =>"root"
                                         );
